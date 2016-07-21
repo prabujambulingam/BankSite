@@ -1,0 +1,36 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+
+		<span class="glyphicon glyphicon-{{myObj.icon}} icon-left"> </span>
+		<span class="panel-headername"> {{myObj.title}} </span>
+		<span class="panel-title">
+		<a data-toggle="collapse" data-parent="#accordion" href="#{{myObj.name}}">
+		<span class="glyphicon glyphicon-plus icon-right" ng-show="showplus" ng-click="Signtoggle()"> </span>
+		<span class="glyphicon glyphicon-minus icon-right" ng-show="showminus" ng-click="Signtoggle()"> </span>
+		</a>
+		</span>
+	</div>
+	<div id="{{myObj.name}}" class="panel-collapse collapse in">
+		<div class="panel-body">
+			<div class="row-data">
+				<p>
+					<h4> {{myObj.username}}
+					</h4>
+				</p>
+			</div>
+			<div class="row-data">
+				<span class="glyphicon glyphicon-user icon-left-black"> </span>
+				<span class="btn-space"> <a href="#" class="btn btn-red"> MY PROFILE </a> </span>
+			</div>
+			<div class="row-data">
+				<span class="glyphicon glyphicon-credit-card icon-left-black"> </span>
+				<span class="btn-space"> <a href="#" class="btn btn-red"> MY CARD PIN </a> </span>
+			</div>
+			<div class="row-data">
+				<span class="label-left"> Last Visited {{myObj.lastvisited}} </span>
+				<span class="btn-space"> <a href="#" class="btn btn-primary	"> logout </a> </span>
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+
+		<span class="glyphicon glyphicon-{{myObj.icon}} icon-left"> </span>
+		<span class="panel-headername"> {{myObj.title}} </span>
+		<span class="panel-title">
+		<a data-toggle="collapse" data-parent="#accordion" href="#{{myObj.name}}">
+		<span class="glyphicon glyphicon-plus icon-right" ng-show="showplus" ng-click="Signtoggle()"> </span>
+		<span class="glyphicon glyphicon-minus icon-right" ng-show="showminus" ng-click="Signtoggle()"> </span>
+		</a>
+		</span>
+	</div>
+	<div id="{{myObj.name}}" class="panel-collapse collapse in">
+		<div class="panel-body">
+			<div class="row-data">
+				<div ng-repeat="x in myObj.shortcutlist">
+					<a href="#" class="shortcuts"> {{x}} </a>
+				</div>
+			</div>
+		</div>
+	</div>
